@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaBuscador", "SistemaBuscador\SistemaBuscador.csproj", "{8F514EFB-27D8-4878-97BA-F91E8CC16B78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaBuscador", "SistemaBuscador\SistemaBuscador.csproj", "{8F514EFB-27D8-4878-97BA-F91E8CC16B78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaBuscadorTest", "SistemaBuscadorTest\SistemaBuscadorTest.csproj", "{FC6F0216-F3BA-404D-A029-442ABBFFD40C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaBuscador.Test", "SistemaBuscador.Test\SistemaBuscador.Test.csproj", "{240C7FD1-A3AD-4FE5-8D9B-3CB296D1534E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8F514EFB-27D8-4878-97BA-F91E8CC16B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F514EFB-27D8-4878-97BA-F91E8CC16B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F514EFB-27D8-4878-97BA-F91E8CC16B78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC6F0216-F3BA-404D-A029-442ABBFFD40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC6F0216-F3BA-404D-A029-442ABBFFD40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC6F0216-F3BA-404D-A029-442ABBFFD40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC6F0216-F3BA-404D-A029-442ABBFFD40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240C7FD1-A3AD-4FE5-8D9B-3CB296D1534E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240C7FD1-A3AD-4FE5-8D9B-3CB296D1534E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240C7FD1-A3AD-4FE5-8D9B-3CB296D1534E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240C7FD1-A3AD-4FE5-8D9B-3CB296D1534E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

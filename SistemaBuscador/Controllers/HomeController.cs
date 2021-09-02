@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SistemaBuscador.Filters;
 using SistemaBuscador.Models;
 using SistemaBuscador.Repositories;
 using System;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace SistemaBuscador.Controllers
 {
+    [ServiceFilter(typeof(SessionFilter))]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,41 +21,13 @@ namespace SistemaBuscador.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Login(LoginViewModel model)
-        {
-            var repo = new LoginRepositories();
-            if (ModelState.IsValid)
-            {
-                if (repo.UserExist(model.Usuario, model.Password))
-                {
-                    Guid sessionId = Guid.NewGuid();
-                    HttpContext.Session.SetString("sessionId", sessionId.ToString());
-                    Response.Cookies.Append("sessionId", sessionId.ToString());
-                    return View("Privacy");
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "El usuario o contraseña no es valido");
-                }
-                
-            }
-            return View("Index", model);
-        }
-
         public IActionResult Privacy()
         {
-            string sessionId = Request.Cookies["sessionId"];
-            if(string.IsNullOrEmpty(sessionId) || !sessionId.Equals(HttpContext.Session.GetString("sessionId")))
-            {
-                return RedirectToAction("Index");
-            }
             return View();
         }
 
